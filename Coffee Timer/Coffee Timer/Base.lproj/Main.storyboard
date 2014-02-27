@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PB3-3T-fvS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="mEk-O0-Xui">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="PB3-3T-fvS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XN2-9F-834">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="r2p-oq-JXm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="78r-6P-dWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="-51"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6TW-Qc-Zzh">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="lSn-qF-nhC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Rvd-Fv-ElK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dzc-VC-GP2">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BpS-su-IWJ" kind="relationship" relationship="rootViewController" id="Sk3-Ea-h6Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Z5-iL-1EE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="922" y="-757"/>
+        </scene>
+        <!--Edit View Controller - Timer Edit View Controller-->
+        <scene sceneID="ZGG-Sa-I3b">
+            <objects>
+                <viewController storyboardIdentifier="Timer Edit View Controller" title="Timer Edit View Controller" id="BpS-su-IWJ" customClass="CTREditViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tMO-pd-dFz" customClass="CTREditViewControler">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Coffee Name" minimumFontSize="17" id="Bvg-7J-mOr">
+                                <rect key="frame" x="20" y="68" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="10" id="Lsk-tI-Dkc">
+                                <rect key="frame" x="18" y="133" width="284" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BpS-su-IWJ" eventType="valueChanged" id="0gf-wl-S3G"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="0.0" maxValue="60" id="0vQ-os-YBC">
+                                <rect key="frame" x="18" y="219" width="284" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BpS-su-IWJ" eventType="valueChanged" id="CA3-8X-ABv"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fhu-d7-o9N">
+                                <rect key="frame" x="20" y="104" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rkq-GS-AwB">
+                                <rect key="frame" x="20" y="190" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="oUU-K0-R5R">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="siX-vU-9aG">
+                            <connections>
+                                <action selector="cancelButtonWasPressed:" destination="BpS-su-IWJ" id="LjW-DX-8SE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="dkq-s6-kSd">
+                            <connections>
+                                <action selector="doneButtonWasPressed:" destination="BpS-su-IWJ" id="d8r-N4-uns"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="minutesLabel" destination="fhu-d7-o9N" id="5mx-Jg-Pmh"/>
+                        <outlet property="minutesSlider" destination="Lsk-tI-Dkc" id="PlT-0A-NgC"/>
+                        <outlet property="nameField" destination="Bvg-7J-mOr" id="9ge-OQ-0Vr"/>
+                        <outlet property="secondsLabel" destination="Rkq-GS-AwB" id="8Z0-lb-fzU"/>
+                        <outlet property="secondsSlider" destination="0vQ-os-YBC" id="jKs-hy-sJZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VUv-dd-sos" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1528" y="-767"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="CTRViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JMQ-dR-eMC">
+                                <rect key="frame" x="101" y="67" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="-20" minY="-20" maxX="20" maxY="20"/>
+                                <size key="titleShadowOffset" width="1" height="-1"/>
+                                <state key="normal" title="View">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonWasPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8eH-kf-eRJ"/>
+                                    <segue destination="akh-Wo-8gK" kind="push" identifier="pushDetail" id="UdF-bT-77E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xD1-3A-e9o">
+                                <rect key="frame" x="62" y="67" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lSn-qF-nhC" kind="modal" identifier="editDetail" id="XSv-yz-vu5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TdZ-BE-u8J">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="view" destination="kh9-bI-dsS" id="HzY-e0-6D4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1269" y="-51"/>
+        </scene>
+        <!--Timer Detail View Controller-->
+        <scene sceneID="WtO-da-qRR">
+            <objects>
+                <viewController id="akh-Wo-8gK" customClass="CTRTimerDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iEl-Ty-D1a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dpc-wv-bcL">
+                                <rect key="frame" x="20" y="84" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0w5-ge-J5p"/>
+                    <connections>
+                        <outlet property="durationLabel" destination="dpc-wv-bcL" id="JTX-pL-XCZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8qH-lo-7Lv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1978" y="-161"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
